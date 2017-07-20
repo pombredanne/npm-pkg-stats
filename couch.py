@@ -3,9 +3,7 @@ import time
 
 couch = couchdb.Server()
 db = couch['registry']
-print db
-print len(db)
-f = open('npm.txt', 'w')
+f = open('stats/pkgs.txt', 'w')
 start = time.clock()
 for id in db:
     f.write(id + '\n')
