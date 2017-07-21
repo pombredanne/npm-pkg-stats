@@ -1,11 +1,12 @@
 import couchdb
 import time
+import util
 
 couch = couchdb.Server()
 db = couch['registry']
-f = open('stats/pkgs.txt', 'w')
+f = open('./count.txt', 'w')
 start = time.clock()
-for id in db:
-    f.write(id + '\n')
+f.write(util.getLocalTime() + '\n')
+f.write(str(len(db)) + '\n')
 f.close()
 print time.clock() - start
