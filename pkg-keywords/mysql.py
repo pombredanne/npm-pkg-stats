@@ -4,7 +4,7 @@ import MySQLdb
 
 
 def increase(keyword):
-    db = MySQLdb.connect("localhost", "root", "", "registry")
+    db = MySQLdb.connect("localhost", "root", "", "newregistry")
     cursor = db.cursor()
     try:
         cursor.execute("INSERT INTO keywords VALUES ('%s', 1)\

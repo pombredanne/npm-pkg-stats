@@ -3,7 +3,7 @@
 import MySQLdb
 
 def increase(pkg, isDev=True):
-    db = MySQLdb.connect("localhost","root","","registry")
+    db = MySQLdb.connect("localhost","root","","newregistry")
     cursor = db.cursor()
     field = 'dev' if isDev else 'dependency'
     dependency = 0 if isDev else 1
